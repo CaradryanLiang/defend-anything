@@ -1,0 +1,21 @@
+## general settings
+name: DefendAnythingStandard
+max_length: 1
+model_list: ['RRDBNet',]
+seed: 200688
+
+#### model
+networks:
+  netSR:
+    which_network: RRDBNet
+  RRDBNet:
+    args:
+      in_nc: 3
+      out_nc: 3
+      nf: 64
+      nb: 23
+      gc: 32
+      upscale: 4
+    pretrained_path: ./pretrained_model/PDM_Real_ESRGAN.pth
+    scale: 4
+
